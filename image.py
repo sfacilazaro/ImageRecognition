@@ -7,16 +7,9 @@ Created on Wed Sep  6 10:41:42 2023
 """
 
 import numpy as np
-#import scipy as sp
-import matplotlib.pyplot as plt
-#import seaborn as sb
-#import sklearn as skl
 import tensorflow as tf
-import pandas as pd
 import os
 import cv2
-import sys
-import subprocess
 
 def acc(pred,targ):
     rows, cols = np.shape(targ-pred)
