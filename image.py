@@ -25,17 +25,15 @@ def acc(pred,targ):
 
 def WheatherMan(nIT,trainPath,testPath):
     """
-    N -------- number of examples in the training set
-    nIT ------ number of iterations for backprop
-    trainPath - path to the dataset
+    N --------- number of examples in the training set
+    nIT ------- number of iterations for backprop
+    trainPath - path to the training dataset
+    testPath -- path to the testing dataset
     """
     
     width  = 128
     height = 128
     channs = 3
-    
-    # DOR = 0.2 #drop out rate
-    # seed = np.random.randint(0,nIT*nIT)
     
     #TRAIN
     # Initialize empty lists to store images and labels
@@ -68,7 +66,6 @@ def WheatherMan(nIT,trainPath,testPath):
     images = np.array(images)
     labels = np.array(labels)
     nLabs = len(np.unique(labels))
-    
     
     # shuffle the data
     shuffle = np.arange(len(images))
@@ -129,8 +126,7 @@ def WheatherMan(nIT,trainPath,testPath):
     images = np.array(images)
     labels = np.array(labels)
     nLabs = len(np.unique(labels))
-    
-    
+
     # shuffle the data
     shuffle = np.arange(len(images))
     np.random.shuffle(shuffle)
