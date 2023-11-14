@@ -60,7 +60,7 @@ def WheatherMan(nIT,trainPath,testPath):
     labels = np.array(labels)
     nLabs = len(np.unique(labels))
     
-    # shuffle the data
+    # shuffle
     shuffle = np.arange(len(images))
     np.random.shuffle(shuffle)
     X = images[shuffle]
@@ -78,9 +78,9 @@ def WheatherMan(nIT,trainPath,testPath):
     ])
 
     myman.compile(
-        loss='categorical_crossentropy',                       #'categorical_crossentropy' - energy function
-        optimizer='adam',                                      #'SGD', 'RMSprop', 'adam' - optimizer algorithm
-        metrics=['accuracy']                                   # measure to track the training
+        loss='categorical_crossentropy',                       
+        optimizer='adam',                                      
+        metrics=['accuracy']                                   
         
     )
     
@@ -120,7 +120,7 @@ def WheatherMan(nIT,trainPath,testPath):
     labels = np.array(labels)
     nLabs = len(np.unique(labels))
 
-    # shuffle the data
+    # shuffle
     shuffle = np.arange(len(images))
     np.random.shuffle(shuffle)
     X = images[shuffle]
